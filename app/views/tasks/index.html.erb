@@ -2,8 +2,8 @@
 
 <ul>
   <% @tasks.each do |task| %>
-    <li><%= task.completed ? "✅" : "❌" %><%= link_to task.title, task_path(task) %><%= link_to ", 🗑 Delete", task_path(task), method: :delete %></li>
+    <li><%= task.completed ? "✅ " : "❌ " %><%= link_to task.title, task_path(task) %><%= link_to ", 🗑 Delete", task_path(task), method: :delete %></li>
   <% end %>
 </ul>
 
-<%= link_to "Add a new task", tasks_new_path %>
+<%= link_to "🆕 Add a new task", tasks_new_path %>
